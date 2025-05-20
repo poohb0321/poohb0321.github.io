@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pooja Bandla - Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Pooja Bandla" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Pooja Bandla">Pooja Bandla</h1>
+
+          <p class="title">Cyber Security Engineer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:richard@example.com" class="contact-link">pbandla0321@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+9083152190" class="contact-link">+1 (908) 315-2190</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">March 21, 2000</time>
+            </div>
+
+          </li>
+
+          
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Edison, New Jersey, USA</address>
+            </div>
+
+          </li>
+
+          <!-- GitHub -->
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="logo-github"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">GitHub</p>
+
+              <a href="https://github.com/poohb0321" class="contact-link" target="_blank">github.com/your-github-poohb0321</a>
+            </div>
+
+          </li>
+
+          <!-- LinkedIn -->
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">LinkedIn</p>
+
+              <a href="https://www.linkedin.com/in/bandlapooja-k1210p2103/ class="contact-link" target="_blank">LinkedInProfile</a>
+            </div>
+
+          </li>
+
+          <!-- Resume -->
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="document-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Resume</p>
+
+              <a href="https://drive.google.com/drive/folders/177ws1mlXOFxBfJRyDv_ucDIAbAeBWyCa?usp=drive_link" class="contact-link" target="_blank">View My Resume</a>
+            </div>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About Me</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Projects</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Certifications</button>
+          </li>
+
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about me  active" data-page="about me">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I'm a Cybersecurity Engineer with 2+ years of experience securing both cloud and on-premises environments. I specialize in implementing identity and access management (IAM), automating infrastructure with Terraform, and enhancing threat detection using tools like Microsoft Defender, Sentinel, and Splunk. I've worked across Azure, AWS, and GCP, integrating security into CI/CD pipelines and aligning with compliance frameworks such as NIST 800-53 and ISO 27001.
+          </p>
+
+          <p>
+          In addition to cloud security, I’ve gained hands-on experience with traditional on-prem environments—configuring and securing Active Directory, managing DNS and DHCP services, and creating custom Group Policy Objects (GPOs) for access control and system hardening. As a motivated early-career professional, I’m focused on building secure, scalable systems that align with Zero Trust principles and support business continuity. 
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Cloud Security Implementation </h4>
+
+                <p class="service-item-text">
+                  Securing Azure, AWS, and GCP environments using native tools like Microsoft Defender, AWS Security Hub, and GCP Security Command Center. Focused on threat detection, compliance, and cloud-native controls.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Cloud Security icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Identity and Access Management (IAM)</h4>
+
+                <p class="service-item-text">
+                  Implementing IAM best practices using Microsoft Entra ID, AWS IAM, and Active Directory — including RBAC, Conditional Access, PIM, MFA, and secure federation protocols.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Infrastructure as Code & Automation</h4>
+
+                <p class="service-item-text">
+                  Using Terraform and CI/CD tools (GitHub Actions, Azure DevOps) to automate the deployment of secure infrastructure and enforce policy-as-code across cloud environments.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">On-Prem Security & Hardening</h4>
+
+                <p class="service-item-text">
+                  Managing and securing Active Directory, DNS, and DHCP; building custom GPOs to enforce security policies and ensure compliance in hybrid environments.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-soc.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Security Operations Center (SOC) & Threat Response</h4>
+
+                <p class="service-item-text">
+                  Monitoring and analyzing security events using Microsoft Sentinel, Defender XDR, Splunk, and Wazuh. Investigating alerts, triaging incidents, and automating response workflows aligned with the MITRE ATT&CK framework.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-comp.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Compliance & Governance</h4>
+
+                <p class="service-item-text">
+                  Implementing and enforcing compliance controls aligned with NIST 800-53, ISO 27001, PCI-DSS, and CIS Benchmarks. Automating audits and risk reporting across cloud environments using Azure Policy, Defender for Cloud, and Terraform Sentinel.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+
+
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Clients</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-1-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-2-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-3-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-4-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-5-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-6-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-7-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-8-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-9-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-10-color.png" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+            <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">University of New Hampshire</h4>
+
+              <span>2022 — 2024</span>
+
+              <p class="timeline-text">
+                Master of Science in Information and Cyber Security
+                Focused on cloud security, threat detection, IAM, and compliance.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Malla Reddy Engineering College for Women</h4>
+
+              <span>2018 — 2022</span>
+
+              <p class="timeline-text">
+                Bachelor of Technology in Electronics and Communication Engineering
+                Graduated with honors, involved in foundational security and networking coursework.
+              </p>
+
+            </li>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Cybersecurity Engineer — Baanyan Software Services</h4>
+
+              <span>Nov 2024 — Present</span>
+
+              <p class="timeline-text">
+                Automated secure GCP & Azure infrastructure using Terraform.
+                Implemented Defender XDR, Sentinel, and IAM controls across cloud and on-prem environments.
+                Enforced Zero Trust using Microsoft Entra ID and Conditional Access policies.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Cloud Security Analyst — Find Me</h4>
+
+              <span>Sep 2024 — 2024</span>
+
+              <p class="timeline-text">
+                Managed AWS IAM roles, Azure Conditional Access, and MFA.
+                Integrated Security Hub and Microsoft Sentinel for real-time threat detection.Hardened network and DLP policies for compliance (NIST, PCI-DSS).
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Cybersecurity Analyst — CRCIT</h4>
+
+              <span>Jun 2023 — Dec 2023</span>
+
+              <p class="timeline-text">
+                Designed on-prem AD environments with DNS/DHCP and custom GPOs.
+                Ran vulnerability simulations using Metasploit, ZAP, and Nessus.
+                Built a secure small-business network using PfSense and Windows Server.
+              </p>
+
+            </li>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Programmer Analyst Trainee — Cognizant</h4>
+
+              <span>Feb 2022 — Jul 2022</span>
+
+              <p class="timeline-text">
+                Supported secure cloud infrastructure with EC2, Lambda, IAM.
+                Assisted in building secure CI/CD pipelines using AWS tools.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Microsoft Defender XDR & Sentinel</h5>
+                <data value="90">90%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Azure, AWS & GCP IAM</h5>
+                <data value="85">85%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Terraform & Infrastructure as Code</h5>
+                <data value="80">80%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">SIEM & Threat Detection (Splunk, Wazuh, Sentinel)</h5>
+                <data value="80">80%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Incident Response & Playbooks (Logic Apps, Lambda)</h5>
+                <data value="75">75%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Python, PowerShell & Bash Scripting</h5>
+                <data value="70">70%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Active Directory, Entra ID, GPOs, LDAP, Kerberos</h5>
+                <data value="75">75%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Cloud Monitoring & Forensics (Sysmon, KQL, CloudTrail)</h5>
+                <data value="70">70%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Zero Trust Architecture & Conditional Access</h5>
+                <data value="75">75%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Compliance & Governance (NIST, CIS, ISO, HIPAA)</h5>
+                <data value="65">65%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 65%;"></div>
+              </div>
+            </li>
+
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+ <article class="projects" data-page="projects">
+
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Cloud Security / Infrastructure as Code</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>On-Prem & Network Security</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Identity & Access Management</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Threat Detection & Response</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Governance, Risk & Compliance</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="On-Prem & Network Security active"
+                data-filter-item
+                data-category="On-Prem & Network Security"
+                data-description="This project simulates a real-world small business network with Windows 10 clients, Windows Server 2022 ADDS, PfSense firewall/router, and a Kali Linux attacker. Includes credential dumping simulation and detection using WEC & Sysmon."
+                data-implementation="<ul>
+                  <li>Set up isolated network using NAT Network in VirtualBox with domain-joined Windows Server and clients.</li>
+                  <li>Deployed PfSense for DNS, DHCP, VPN, and firewall rule configuration.</li>
+                  <li>Installed Sysmon and Windows Event Forwarding (WEF) for event logging.</li>
+                  <li>Simulated credential dumping and lateral movement using Kali Linux tools.</li>
+                  <li>Tuned detection rules and monitored events via Windows Event Viewer and Sysmon logs.</li>
+                </ul>"
+                data-images='["./assets/images/hightechlab-diagram.png","./assets/images/lsass-attack-simulation.png"]'>
+
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/hightechlab-diagram.png" alt="Small Business Threat Simulation" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Small Business Network With Threat Simulation</h3>
+
+                <p class="project-category">On-Prem & Network Security</p>
+
+              </a>
+
+            </li>
+
+
+            <li class="Cloud Security / Infrastructure as Code active"
+                data-filter-item
+                data-category="Cloud Security / Infrastructure as Code"
+                data-description="Designed and deployed a secure 3-tier architecture on Azure using Terraform modules. Includes VNet, NSGs, ASGs, Private Endpoints, Bastion Host, and Key Vault integration with CI/CD pipelines and tfsec security scans."
+                data-implementation="<ul>
+                  <li>Used Terraform to deploy resource groups, virtual networks, subnets, and NSGs.</li>
+                  <li>Implemented network segmentation with Application Security Groups for Web, App, and DB tiers.</li>
+                  <li>Enabled Bastion Host for secure RDP access and deployed Private Endpoints for database access.</li>
+                  <li>Configured diagnostic settings to log into Log Analytics.</li>
+                  <li>Secured Key Vault with RBAC and policy enforcement via Azure Policy.</li>
+                </ul>"
+                data-images='[
+                  "./assets/images/3tier-architecture.png",
+                  "./assets/images/terraform-pipeline.png"
+                ]'>
+
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/3tier-architecture.png" alt="3-Tier Secure Azure Architecture" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">3-Tier Secure Azure Architecture</h3>
+                <p class="project-category">Cloud Security / Infrastructure as Code</p>
+              </a>
+
+            </li>
+
+
+
+            <li class="Identity & Access Management active"
+                data-filter-item
+                data-category="Identity & Access Management"
+                data-description="Automated IAM provisioning using Terraform for Azure Entra ID and AWS IAM. Implemented RBAC, MFA enforcement, Conditional Access Policies, and least-privilege roles across hybrid cloud environments."
+                data-implementation="<ul>
+                  <li>Created reusable Terraform modules for Entra ID groups, users, and role assignments.</li>
+                  <li>Configured Conditional Access Policies (MFA, sign-in risk, location-based) using Microsoft Graph API.</li>
+                  <li>Automated Key Vault access control via Access Policies and RBAC.</li>
+                  <li>Integrated Azure AD App Registrations and Enterprise Apps with scoped permissions.</li>
+                </ul>"
+                data-images='[
+                  "./assets/images/iam-terraform-overview.png",
+                  "./assets/images/entra-policy.png"
+                ]'>
+
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/iam-terraform-overview.png" alt="IAM Automation with Terraform" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">IAM Automation with Terraform</h3>
+                <p class="project-category">Identity & Access Management</p>
+              </a>
+
+            </li>
+
+
+            <li class="Threat Detection & Response active"
+                data-filter-item
+                data-category="Threat Detection & Response"
+                data-implementation="<ul>
+                  <li>Enabled Microsoft Defender for Endpoint, Identity, Cloud Apps, and Office 365.</li>
+                  <li>Connected signals to Microsoft 365 Defender portal and verified alert correlations.</li>
+                  <li>Simulated attack tactics (e.g., credential dumping, lateral movement).</li>
+                  <li>Investigated incidents via the unified security portal with correlated alerts.</li>
+                  <li>Mapped detections to MITRE tactics for incident response readiness.</li>
+                </ul>"
+                data-description="Simulated threat activity using custom payloads and observed real-time detection in Microsoft Defender XDR and Sentinel. Automated incident triage, alert suppression, and playbook-based response."
+                data-images='[
+                  "./assets/images/defender-xdr-detection.png",
+                  "./assets/images/sentinel-alerts.png"
+                ]'>
+
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/defender-xdr-detection.png" alt="Microsoft Defender XDR Detection Flow" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Microsoft Defender XDR Detection Flow</h3>
+                <p class="project-category">Threat Detection & Response</p>
+              </a>
+            </li>
+
+
+            <li class="On-Prem & Network Security active"
+                data-filter-item
+                data-category="On-Prem & Network Security"
+                data-description="Built a simulated business network using PfSense, Windows Server 2022 (ADDS, DHCP, DNS), and Windows 10 clients. Configured OU, GPOs, Sysmon, and simulated credential dumping attacks using Kali Linux for threat detection."
+                data-implementation="<ul>
+                  <li>Installed PfSense on VirtualBox and configured VLANs, static routes, DNS Resolver, and firewall rules.</li>
+                  <li>Built Windows Server 2022 Domain Controller with DNS, DHCP, and AD DS roles.</li>
+                  <li>Joined Windows 10 clients to the domain and enforced policies using Group Policy Objects.</li>
+                  <li>Validated network segmentation and AD security using Nmap and simulated attacks.</li>
+                </ul>"
+                data-images='[
+                  "./assets/images/pfsense-setup.png",
+                  "./assets/images/windows-ad-config.png"
+                ]'>
+
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/pfsense-setup.png" alt="PfSense with AD Simulation" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">PfSense with AD Simulation</h3>
+                <p class="project-category">On-Prem & Network Security</p>
+              </a>
+            </li>
+
+
+            <li class="Identity & Access Management active"
+                data-filter-item
+                data-category="Identity & Access Management"
+                data-description="Designed a hybrid identity and access management strategy integrating Microsoft Entra ID with AWS IAM. Implemented SSO, RBAC, Conditional Access, and AWS IAM Access Analyzer for cross-platform governance."
+                data-implementation="<ul>
+                  <li>Integrated AWS IAM roles with Entra ID using SAML 2.0 federation.</li>
+                  <li>Configured Entra Conditional Access Policies for AWS login scenarios.</li>
+                  <li>Defined least-privilege roles and permission sets in AWS IAM.</li>
+                  <li>Enabled AWS CloudTrail and Azure AD sign-in logs for monitoring and audit.</li>
+                </ul>"
+                data-images='[
+                  "./assets/images/hybrid-iam-entra-aws.png",
+                  "./assets/images/entra-aws-rbac.png"
+                ]'>
+
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/hybrid-iam-entra-aws.png" alt="Hybrid IAM Strategy with Entra ID & AWS IAM" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Hybrid IAM Strategy with Entra ID & AWS IAM</h3>
+                <p class="project-category">Identity & Access Management</p>
+              </a>
+            </li>
+
+
+            <li class="Governance, Risk & Compliance active"
+                data-filter-item
+                data-category="Governance, Risk & Compliance"
+                data-description="Implemented a CSPM solution using Microsoft Defender for Cloud, Azure Policy, and Terraform Sentinel to ensure continuous compliance with NIST 800-53 and CIS Benchmarks. Automated audit reporting and remediation alerts."
+                data-implementation="<ul>
+                  <li>Enabled Microsoft Defender for Cloud and configured policy initiatives for NIST SP 800-53 and CIS Benchmarks.</li>
+                  <li>Remediated security recommendations across compute, networking, and data services.</li>
+                  <li>Integrated Secure Score tracking and regulatory compliance workbook views.</li>
+                  <li>Automated alerts for misconfigurations and compliance drifts using Logic Apps.</li>
+                </ul>"
+                data-images='[
+                  "./assets/images/cspm-dashboard.png",
+                  "./assets/images/azure-policy-remediation.png"
+                ]'>
+
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/cspm-dashboard.png" alt="Compliance-Driven Cloud Security Posture Management" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Compliance-Driven Cloud Security Posture Management</h3>
+                <p class="project-category">Governance, Risk & Compliance</p>
+              </a>
+            </li>
+
+
+            <li class="Threat Detection & Response active"
+                data-filter-item
+                data-category="Threat Detection & Response"
+                data-description="Automated security incident triage and enrichment in Microsoft Sentinel using Logic Apps and Azure Functions. Created custom analytics rules, playbooks for phishing alerts, and integrated JIRA for ticketing workflow."
+                data-implementation="<ul>
+                  <li>Connected data connectors to ingest Azure logs, Microsoft 365, Defender, and Syslog data.</li>
+                  <li>Created analytics rules for suspicious sign-ins, privilege escalation, and lateral movement.</li>
+                  <li>Designed Logic App playbooks for automated ticketing, alert enrichment, and email notifications.</li>
+                  <li>Used Watchlists and Threat Intelligence to refine correlation rules and reduce false positives.</li>
+                </ul>"
+                data-images='[
+                  "./assets/images/sentinel-logic-apps.png",
+                  "./assets/images/sentinel-playbook-alert.png"
+                ]'>
+
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/sentinel-logic-apps.png" alt="SOC Workflow Automation with Microsoft Sentinel & Logic Apps" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">SOC Workflow Automation with Microsoft Sentinel & Logic Apps</h3>
+                <p class="project-category">Threat Detection & Response</p>
+              </a>
+            </li>
+
+
+
+            <li class="Cloud Security / Infrastructure as Code active"
+                data-filter-item
+                data-category="Cloud Security / Infrastructure as Code"
+                data-description="Built a secure Azure 3-tier architecture Included: VNet, NSGs, ASGs, Bastion, Private Endpoints Integrated tfsec scans & CI/CD pipelines"
+                data-implementation="<ul>
+                  <li>Created multi-stage Azure DevOps pipelines for dev and prod deployments.</li>
+                  <li>Integrated tfsec and Checkov to run IaC scans on Terraform code pre-deployment.</li>
+                  <li>Configured approval gates and variable groups to secure secret handling.</li>
+                  <li>Set up service connections and least-privilege role assignments for Terraform deployment identity.</li>
+                </ul>"
+                data-images='[
+                  "./assets/images/tfsec-pipeline.png",
+                  "./assets/images/terraform-azure-devops.png"
+                ]'>
+
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/tfsec-pipeline.png" alt="Terraform Security CI/CD with tfsec & Azure DevOps" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Terraform Security CI/CD with tfsec & Azure DevOps</h3>
+                <p class="project-category">Cloud Security / Infrastructure as Code</p>
+              </a>
+            </li>
+
+
+
+          </ul>
+
+
+        </section>
+
+      </article>
+
+
+      <!--
+        - #BLOG
+      -->
+
+     <article class="certifications" data-page="certifications">
+
+        <header>
+          <h2 class="h2 article-title">Certifications</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-1.jpg" alt="Microsoft Certified: Cybersecurity Architect Expert (SC-100)" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Microsoft</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Dec 07, 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Microsoft Certified: Security Operations Analyst Associate</h3>
+
+                  <p class="blog-text">
+                    Demonstrates expertise in using Microsoft Sentinel and Defender XDR to monitor, detect, investigate, and respond to security incidents across hybrid environments.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Microsoft</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Dec 17, 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Microsoft Certified: Azure Security Engineer Associate</h3>
+
+                  <p class="blog-text">
+                    alidates skills in implementing security controls, managing identity and access, and protecting data, applications, and networks in Microsoft Azure environments.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Microsoft</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Jan 04, 2025</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Microsoft Certified: Identity and Access Administrator Associate</h3>
+
+                  <p class="blog-text">
+                    Focuses on managing Microsoft Entra ID, implementing authentication and access controls, and ensuring secure identity lifecycle and governance across cloud and hybrid environments.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Microsoft</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Jan 04, 2025</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Microsoft Certified: Cybersecurity Architect Expert</h3>
+
+                  <p class="blog-text">
+                    Demonstrates advanced expertise in designing and evolving cybersecurity strategies, implementing Zero Trust architectures, and integrating security solutions across cloud and hybrid environments.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Microsoft</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Dec 01, 2025</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Microsoft Certified: Security, Compliance, and Identity Fundamentals</h3>
+
+                  <p class="blog-text">
+                    Provides foundational knowledge of security, compliance, identity, and governance concepts across Microsoft cloud services.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-8.jpg" alt="Design digest #79" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Microsoft</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Nov 30, 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Microsoft Certified: Azure Fundamentals</h3>
+
+                  <p class="blog-text">
+                    Covers core Azure concepts, services, pricing, support, and the basics of cloud security, privacy, and compliance.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-7.jpg" alt="Design digest #79" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">CompTIA</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Dec 18, 2023</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">CompTIA Security +</h3>
+
+                  <p class="blog-text">
+                    Validates foundational skills in cybersecurity, including threat analysis, risk management, network security, and incident response.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">CompTIA</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Dec 11, 2023</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">CompTIA A+</h3>
+
+                  <p class="blog-text">
+                    Demonstrates core IT skills in hardware, software, networking, troubleshooting, and foundational security across various operating systems and devices.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97028.66730544555!2d-74.46050817343972!3d40.53836669453495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3d37f68bea199%3A0xf22bc5a66f83d4ea!2sEdison%2C%20NJ!5e0!3m2!1sen!2sus!4v1747101786735!5m2!1sen!2sus"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+<div id="project-modal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h3 id="modal-title"></h3>
+    <div id="modal-gallery" class="modal-gallery"></div>
+    <p id="modal-description"></p>
+  </div>
+</div>
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
