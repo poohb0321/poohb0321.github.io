@@ -844,40 +844,38 @@
                 data-category="On-Prem & Network Security"
             
                 data-description="
-                  <p>Deployed a virtual lab that combines PfSense firewall/router with a Windows Server 2022 Active Directory environment. Demonstrates secure network segmentation, DNS/DHCP services, GPO enforcement, and validation with simulated network scans.</p>
+                  <p>Built a virtual lab that integrates PfSense firewall/router with a Windows Server 2022 Active Directory domain. Showcases secure segmentation, DNS / DHCP services, GPO enforcement, and validation via network-security scans.</p>
                 "
             
                 data-implementation="
                   <ul>
                     <li>Installed PfSense in VirtualBox; configured VLANs, static routes, and firewall rules.</li>
-                    <li>Set up Windows Server 2022 as Domain Controller (AD DS, DNS, DHCP).</li>
-                    <li>Joined Windows 10 clients to the domain; enforced security baselines with GPOs.</li>
-                    <li>Enabled logging and packet capture on PfSense to monitor traffic.</li>
-                    <li>Validated segmentation and AD hardening via Nmap and Nessus scans.</li>
+                    <li>Deployed Windows Server 2022 as Domain Controller (AD DS, DNS, DHCP); joined Win-10 clients.</li>
+                    <li>Applied baseline hardening with Group Policy Objects and enabled Syslog exports.</li>
+                    <li>Verified segmentation & AD security using Nmap and Nessus scan reports.</li>
                   </ul>
                 "
             
                 data-images='[
-                  \"./assets/images/pfsense-setup.png\",
-                  \"./assets/images/windows-ad-config.png\",
-                  \"./assets/images/vlan-diagram.png\",
-                  \"./assets/images/nmap-scan-results.png\"
+                  "./assets/images/pfsense-setup.png",
+                  "./assets/images/windows-ad-config.png",
+                  "./assets/images/vlan-diagram.png",
+                  "./assets/images/nmap-scan-results.png"
                 ]'>
             
-              <a href=\"#\">
-                <figure class=\"project-img\">
-                  <div class=\"project-item-icon-box\"><ion-icon name=\"eye-outline\"></ion-icon></div>
-            
-                  <!-- First image appears on the card; all images load in modal slider -->
-                  <img src=\"./assets/images/pfsense-setup.png\"
-                       alt=\"PfSense with AD Simulation\"
-                       loading=\"lazy\">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                  <img src="./assets/images/pfsense-setup.png"
+                       alt="PfSense with AD Simulation"
+                       loading="lazy">
                 </figure>
             
-                <h3 class=\"project-title\">PfSense with AD Simulation</h3>
-                <p class=\"project-category\">On-Prem & Network Security</p>
+                <h3 class="project-title">PfSense with AD Simulation</h3>
+                <p class="project-category">On-Prem & Network Security</p>
               </a>
             </li>
+
 
             <!-- Hybrid IAM Strategy with Entra ID & AWS IAM -->
             <li class="Identity & Access Management active"
