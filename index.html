@@ -848,6 +848,66 @@
             </li>
 
 
+            <li class="On-Prem & Network Security active"
+                data-filter-item
+                data-category="On-Prem & Network Security"
+                data-description="Lab build: VirtualBox NAT network, PfSense firewall, Windows Server 2022 ADDS, domain-joined Windows 10 clients, Sysmon + WEF."
+                data-implementation="<ul>
+                  <li>Created isolated NAT network in VirtualBox with two segments (LAN, Internet).</li>
+                  <li>Installed PfSense for DNS, DHCP, VPN, and firewall policy management.</li>
+                  <li>Provisioned Windows Server 2022 DC (AD DS, DNS) and joined six Win10 clients.</li>
+                  <li>Deployed Sysmon and configured Windows Event Forwarding to a collector.</li>
+                </ul>"
+                data-images='[
+                  \"./assets/images/lab-diagram.png\",
+                  \"./assets/images/pfsense-dashboard.png\",
+                  \"./assets/images/server-ad-setup.png\"
+                ]'>
+            
+              <a href="#">
+                <figure class="project-img slider" data-slider>
+                  <img src="./assets/images/lab-diagram.png" alt="Lab network diagram" class="slide active" loading="lazy">
+                  <button class="prev" data-prev>&#10094;</button>
+                  <button class="next" data-next>&#10095;</button>
+                </figure>
+            
+                <h3 class="project-title">Small Biz Threat Sim – Setup & Environment</h3>
+                <p class="project-category">On-Prem & Network Security</p>
+              </a>
+            </li>
+            
+            <!-- 2. Attack Simulation & Detection -->
+            <li class="On-Prem & Network Security active"
+                data-filter-item
+                data-category="On-Prem & Network Security"
+                data-description="Credential-dumping and lateral-movement simulation with Kali; detection via Sysmon & WEF; GPO-hardening outcomes."
+                data-implementation="<ul>
+                  <li>Executed Mimikatz & ProcDump attacks from Kali to dump LSASS credentials.</li>
+                  <li>Captured lateral-movement attempts (SMB, RDP) and privilege-escalation logs.</li>
+                  <li>Correlated Sysmon Event IDs 10, 4624, 4670 in Windows Event Viewer.</li>
+                  <li>Strengthened GPOs (restricted Admin shares, LSA protection) and re-tested.</li>
+                </ul>"
+                data-images='[
+                  \"./assets/images/attack-sim-1.png\",
+                  \"./assets/images/attack-sim-2.png\",
+                  \"./assets/images/sysmon-log.png\",
+                  \"./assets/images/gpo-hardening.png\"
+                ]'>
+            
+              <a href="#">
+                <figure class="project-img slider" data-slider>
+                  <img src="./assets/images/attack-sim-1.png" alt="Credential-dump simulation" class="slide active" loading="lazy">
+                  <button class="prev" data-prev>&#10094;</button>
+                  <button class="next" data-next>&#10095;</button>
+                </figure>
+            
+                <h3 class="project-title">Small Biz Threat Sim – Attack & Detection</h3>
+                <p class="project-category">On-Prem & Network Security</p>
+              </a>
+            </li>
+
+
+
 
           </ul>
 
