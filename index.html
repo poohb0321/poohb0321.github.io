@@ -736,272 +736,114 @@
 
           <ul class="project-list">
 
-            <li class="On-Prem & Network Security active"
-                data-filter-item
-                data-category="On-Prem & Network Security"
-                data-description="This project simulates a real-world small business network with Windows 10 clients, Windows Server 2022 ADDS, PfSense firewall/router, and a Kali Linux attacker. Includes credential dumping simulation and detection using WEC & Sysmon."
-                data-implementation="<ul>
-                  <li>Set up isolated network using NAT Network in VirtualBox with domain-joined Windows Server and clients.</li>
-                  <li>Deployed PfSense for DNS, DHCP, VPN, and firewall rule configuration.</li>
-                  <li>Installed Sysmon and Windows Event Forwarding (WEF) for event logging.</li>
-                  <li>Simulated credential dumping and lateral movement using Kali Linux tools.</li>
-                  <li>Tuned detection rules and monitored events via Windows Event Viewer and Sysmon logs.</li>
-                </ul>"
-                data-images='["./assets/images/hightechlab-diagram.png","./assets/images/lsass-attack-simulation.png"]'>
-
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/hightechlab-diagram.png" alt="Small Business Threat Simulation" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Small Business Network With Threat Simulation</h3>
-
-                <p class="project-category">On-Prem & Network Security</p>
-
-              </a>
-
-            </li>
-
-
             <li class="Cloud Security / Infrastructure as Code active"
                 data-filter-item
                 data-category="Cloud Security / Infrastructure as Code"
-                data-description="Designed and deployed a secure 3-tier architecture on Azure using Terraform modules. Includes VNet, NSGs, ASGs, Private Endpoints, Bastion Host, and Key Vault integration with CI/CD pipelines and tfsec security scans."
+                data-description="High-level overview of the 3-Tier design, key objectives, and core Azure services used."
                 data-implementation="<ul>
-                  <li>Used Terraform to deploy resource groups, virtual networks, subnets, and NSGs.</li>
-                  <li>Implemented network segmentation with Application Security Groups for Web, App, and DB tiers.</li>
-                  <li>Enabled Bastion Host for secure RDP access and deployed Private Endpoints for database access.</li>
-                  <li>Configured diagnostic settings to log into Log Analytics.</li>
-                  <li>Secured Key Vault with RBAC and policy enforcement via Azure Policy.</li>
+                  <li>Summarise Zero-Trust goals, scalability targets, and cost guardrails.</li>
+                  <li>Enumerate primary resources: App Gateway + WAF, AKS, Private DB, Key Vault.</li>
+                  <li>Explain separation of Web, App, and Data subnets.</li>
                 </ul>"
                 data-images='[
-                  "./assets/images/3tier-architecture.png",
-                  "./assets/images/terraform-pipeline.png"
+                  \"./assets/images/3tier-overview-1.png\",
+                  \"./assets/images/3tier-overview-2.png\",
+                  \"./assets/images/3tier-overview-3.png\"
                 ]'>
-
+            
               <a href="#">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/3tier-architecture.png" alt="3-Tier Secure Azure Architecture" loading="lazy">
+                <figure class="project-img slider" data-slider>
+                  <img src="./assets/images/3tier-overview-1.png" alt="3-Tier Overview diagram" class="slide active" loading="lazy">
+                  <button class="prev" data-prev>&#10094;</button>
+                  <button class="next" data-next>&#10095;</button>
                 </figure>
-
-                <h3 class="project-title">3-Tier Secure Azure Architecture</h3>
-                <p class="project-category">Cloud Security / Infrastructure as Code</p>
-              </a>
-
-            </li>
-
-
-
-            <li class="Identity & Access Management active"
-                data-filter-item
-                data-category="Identity & Access Management"
-                data-description="Automated IAM provisioning using Terraform for Azure Entra ID and AWS IAM. Implemented RBAC, MFA enforcement, Conditional Access Policies, and least-privilege roles across hybrid cloud environments."
-                data-implementation="<ul>
-                  <li>Created reusable Terraform modules for Entra ID groups, users, and role assignments.</li>
-                  <li>Configured Conditional Access Policies (MFA, sign-in risk, location-based) using Microsoft Graph API.</li>
-                  <li>Automated Key Vault access control via Access Policies and RBAC.</li>
-                  <li>Integrated Azure AD App Registrations and Enterprise Apps with scoped permissions.</li>
-                </ul>"
-                data-images='[
-                  "./assets/images/iam-terraform-overview.png",
-                  "./assets/images/entra-policy.png"
-                ]'>
-
-              <a href="#">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/iam-terraform-overview.png" alt="IAM Automation with Terraform" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">IAM Automation with Terraform</h3>
-                <p class="project-category">Identity & Access Management</p>
-              </a>
-
-            </li>
-
-
-            <li class="Threat Detection & Response active"
-                data-filter-item
-                data-category="Threat Detection & Response"
-                data-implementation="<ul>
-                  <li>Enabled Microsoft Defender for Endpoint, Identity, Cloud Apps, and Office 365.</li>
-                  <li>Connected signals to Microsoft 365 Defender portal and verified alert correlations.</li>
-                  <li>Simulated attack tactics (e.g., credential dumping, lateral movement).</li>
-                  <li>Investigated incidents via the unified security portal with correlated alerts.</li>
-                  <li>Mapped detections to MITRE tactics for incident response readiness.</li>
-                </ul>"
-                data-description="Simulated threat activity using custom payloads and observed real-time detection in Microsoft Defender XDR and Sentinel. Automated incident triage, alert suppression, and playbook-based response."
-                data-images='[
-                  "./assets/images/defender-xdr-detection.png",
-                  "./assets/images/sentinel-alerts.png"
-                ]'>
-
-              <a href="#">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/defender-xdr-detection.png" alt="Microsoft Defender XDR Detection Flow" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Microsoft Defender XDR Detection Flow</h3>
-                <p class="project-category">Threat Detection & Response</p>
+            
+                <h3 class="project-title">3-Tier Azure – Overview</h3>
+                <p class="project-category">Cloud Security / IaC</p>
               </a>
             </li>
-
-
-            <li class="On-Prem & Network Security active"
-                data-filter-item
-                data-category="On-Prem & Network Security"
-                data-description="Built a simulated business network using PfSense, Windows Server 2022 (ADDS, DHCP, DNS), and Windows 10 clients. Configured OU, GPOs, Sysmon, and simulated credential dumping attacks using Kali Linux for threat detection."
-                data-implementation="<ul>
-                  <li>Installed PfSense on VirtualBox and configured VLANs, static routes, DNS Resolver, and firewall rules.</li>
-                  <li>Built Windows Server 2022 Domain Controller with DNS, DHCP, and AD DS roles.</li>
-                  <li>Joined Windows 10 clients to the domain and enforced policies using Group Policy Objects.</li>
-                  <li>Validated network segmentation and AD security using Nmap and simulated attacks.</li>
-                </ul>"
-                data-images='[
-                  "./assets/images/pfsense-setup.png",
-                  "./assets/images/windows-ad-config.png"
-                ]'>
-
-              <a href="#">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/pfsense-setup.png" alt="PfSense with AD Simulation" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">PfSense with AD Simulation</h3>
-                <p class="project-category">On-Prem & Network Security</p>
-              </a>
-            </li>
-
-
-            <li class="Identity & Access Management active"
-                data-filter-item
-                data-category="Identity & Access Management"
-                data-description="Designed a hybrid identity and access management strategy integrating Microsoft Entra ID with AWS IAM. Implemented SSO, RBAC, Conditional Access, and AWS IAM Access Analyzer for cross-platform governance."
-                data-implementation="<ul>
-                  <li>Integrated AWS IAM roles with Entra ID using SAML 2.0 federation.</li>
-                  <li>Configured Entra Conditional Access Policies for AWS login scenarios.</li>
-                  <li>Defined least-privilege roles and permission sets in AWS IAM.</li>
-                  <li>Enabled AWS CloudTrail and Azure AD sign-in logs for monitoring and audit.</li>
-                </ul>"
-                data-images='[
-                  "./assets/images/hybrid-iam-entra-aws.png",
-                  "./assets/images/entra-aws-rbac.png"
-                ]'>
-
-              <a href="#">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/hybrid-iam-entra-aws.png" alt="Hybrid IAM Strategy with Entra ID & AWS IAM" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Hybrid IAM Strategy with Entra ID & AWS IAM</h3>
-                <p class="project-category">Identity & Access Management</p>
-              </a>
-            </li>
-
-
-            <li class="Governance, Risk & Compliance active"
-                data-filter-item
-                data-category="Governance, Risk & Compliance"
-                data-description="Implemented a CSPM solution using Microsoft Defender for Cloud, Azure Policy, and Terraform Sentinel to ensure continuous compliance with NIST 800-53 and CIS Benchmarks. Automated audit reporting and remediation alerts."
-                data-implementation="<ul>
-                  <li>Enabled Microsoft Defender for Cloud and configured policy initiatives for NIST SP 800-53 and CIS Benchmarks.</li>
-                  <li>Remediated security recommendations across compute, networking, and data services.</li>
-                  <li>Integrated Secure Score tracking and regulatory compliance workbook views.</li>
-                  <li>Automated alerts for misconfigurations and compliance drifts using Logic Apps.</li>
-                </ul>"
-                data-images='[
-                  "./assets/images/cspm-dashboard.png",
-                  "./assets/images/azure-policy-remediation.png"
-                ]'>
-
-              <a href="#">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/cspm-dashboard.png" alt="Compliance-Driven Cloud Security Posture Management" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Compliance-Driven Cloud Security Posture Management</h3>
-                <p class="project-category">Governance, Risk & Compliance</p>
-              </a>
-            </li>
-
-
-            <li class="Threat Detection & Response active"
-                data-filter-item
-                data-category="Threat Detection & Response"
-                data-description="Automated security incident triage and enrichment in Microsoft Sentinel using Logic Apps and Azure Functions. Created custom analytics rules, playbooks for phishing alerts, and integrated JIRA for ticketing workflow."
-                data-implementation="<ul>
-                  <li>Connected data connectors to ingest Azure logs, Microsoft 365, Defender, and Syslog data.</li>
-                  <li>Created analytics rules for suspicious sign-ins, privilege escalation, and lateral movement.</li>
-                  <li>Designed Logic App playbooks for automated ticketing, alert enrichment, and email notifications.</li>
-                  <li>Used Watchlists and Threat Intelligence to refine correlation rules and reduce false positives.</li>
-                </ul>"
-                data-images='[
-                  "./assets/images/sentinel-logic-apps.png",
-                  "./assets/images/sentinel-playbook-alert.png"
-                ]'>
-
-              <a href="#">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/sentinel-logic-apps.png" alt="SOC Workflow Automation with Microsoft Sentinel & Logic Apps" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">SOC Workflow Automation with Microsoft Sentinel & Logic Apps</h3>
-                <p class="project-category">Threat Detection & Response</p>
-              </a>
-            </li>
-
-
-
+            
+            <!-- 2. Architecture Design -->
             <li class="Cloud Security / Infrastructure as Code active"
                 data-filter-item
                 data-category="Cloud Security / Infrastructure as Code"
-                data-description="Built a secure Azure 3-tier architecture Included: VNet, NSGs, ASGs, Bastion, Private Endpoints Integrated tfsec scans & CI/CD pipelines"
+                data-description="Detailed network + service topology: VNet, subnets, NSGs, Azure Firewall, and routing."
                 data-implementation="<ul>
-                  <li>Created multi-stage Azure DevOps pipelines for dev and prod deployments.</li>
-                  <li>Integrated tfsec and Checkov to run IaC scans on Terraform code pre-deployment.</li>
-                  <li>Configured approval gates and variable groups to secure secret handling.</li>
-                  <li>Set up service connections and least-privilege role assignments for Terraform deployment identity.</li>
+                  <li>Show ARM-level diagram with tiered subnets & UDRs.</li>
+                  <li>Highlight Private Endpoints + DNS zones.</li>
+                  <li>Document inbound → outbound traffic flows via WAF and Firewall.</li>
                 </ul>"
                 data-images='[
-                  "./assets/images/tfsec-pipeline.png",
-                  "./assets/images/terraform-azure-devops.png"
+                  \"./assets/images/architecture-design-1.png\",
+                  \"./assets/images/architecture-design-2.png\",
+                  \"./assets/images/architecture-design-3.png\",
+                  \"./assets/images/architecture-design-4.png\"
                 ]'>
-
+            
               <a href="#">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/tfsec-pipeline.png" alt="Terraform Security CI/CD with tfsec & Azure DevOps" loading="lazy">
+                <figure class="project-img slider" data-slider>
+                  <img src="./assets/images/architecture-design-1.png" alt="Network design" class="slide active" loading="lazy">
+                  <button class="prev" data-prev>&#10094;</button>
+                  <button class="next" data-next>&#10095;</button>
                 </figure>
-
-                <h3 class="project-title">Terraform Security CI/CD with tfsec & Azure DevOps</h3>
-                <p class="project-category">Cloud Security / Infrastructure as Code</p>
+            
+                <h3 class="project-title">3-Tier Azure – Architecture Design</h3>
+                <p class="project-category">Cloud Security / IaC</p>
+              </a>
+            </li>
+            
+            <!-- 3. Security & Automation -->
+            <li class="Cloud Security / Infrastructure as Code active"
+                data-filter-item
+                data-category="Cloud Security / Infrastructure as Code"
+                data-description="Zero-Trust controls + Defender / Sentinel integration + policy enforcement with tfsec."
+                data-implementation="<ul>
+                  <li>WAF OWASP rules, NSG segmentation, Azure Firewall threat intel.</li>
+                  <li>Defender for Cloud + Sentinel analytics & Logic App auto-remediation.</li>
+                  <li>Terraform modules with tfsec/Checkov gates in pipeline.</li>
+                </ul>"
+                data-images='[
+                  \"./assets/images/security-automation-1.png\",
+                  \"./assets/images/security-automation-2.png\",
+                  \"./assets/images/security-automation-3.png\"
+                ]'>
+            
+              <a href="#">
+                <figure class="project-img slider" data-slider>
+                  <img src="./assets/images/security-automation-1.png" alt="Security automation dashboards" class="slide active" loading="lazy">
+                  <button class="prev" data-prev>&#10094;</button>
+                  <button class="next" data-next>&#10095;</button>
+                </figure>
+            
+                <h3 class="project-title">3-Tier Azure – Security & Automation</h3>
+                <p class="project-category">Cloud Security / IaC</p>
+              </a>
+            </li>
+            
+            <!-- 4. CI/CD Pipeline & Outcomes -->
+            <li class="Cloud Security / Infrastructure as Code active"
+                data-filter-item
+                data-category="Cloud Security / Infrastructure as Code"
+                data-description="Azure DevOps multi-stage pipeline, tfsec checks, and deployment KPI results."
+                data-implementation="<ul>
+                  <li>YAML pipeline with Dev → Prod stages, approvals, and variable groups.</li>
+                  <li>tfsec/Checkov quality gates blocking non-compliant PRs.</li>
+                  <li>Post-deployment metrics: build time, drift detection, cost dashboards.</li>
+                </ul>"
+                data-images='[
+                  \"./assets/images/cicd-pipeline-1.png\",
+                  \"./assets/images/cicd-pipeline-2.png\"
+                ]'>
+            
+              <a href="#">
+                <figure class="project-img slider" data-slider>
+                  <img src="./assets/images/cicd-pipeline-1.png" alt="Azure DevOps pipeline" class="slide active" loading="lazy">
+                  <button class="prev" data-prev>&#10094;</button>
+                  <button class="next" data-next>&#10095;</button>
+                </figure>
+            
+                <h3 class="project-title">3-Tier Azure – CI/CD Pipeline & Outcomes</h3>
+                <p class="project-category">Cloud Security / IaC</p>
               </a>
             </li>
 
