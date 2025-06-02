@@ -1103,6 +1103,43 @@ main {
   padding-left: 20px;
 }
 
+/* ===== Modal generic ===== */
+#project-modal.hidden { display: none; }
+
+/* ===== Slider container ===== */
+.slider {
+  position: relative;
+  max-width: 100%;
+}
+
+/* ===== Slider image ===== */
+.slider-img {
+  width: 100%;
+  height: auto;
+}
+
+/* ===== Arrow buttons ===== */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;          /* adjust arrow size */
+  color: #ffffff;           /* arrow color */
+  background: rgba(0,0,0,0.4);
+  border: none;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* left & right placement */
+.slider-btn.prev { left: 0.5rem; }
+.slider-btn.next { right: 0.5rem; }
+
+.slider-btn:hover,
+.slider-btn:focus {
+  background: rgba(0,0,0,0.6);
+}
 
 
 /*-----------------------------------*\
