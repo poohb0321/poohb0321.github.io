@@ -717,85 +717,46 @@
             <!-- =======================================================
                  🔹 3-Tier Secure Azure Architecture  (ENHANCED)
             ======================================================= -->
+            <!-- 3-Tier Secure Azure Architecture -->
             <li class="Cloud Security / Infrastructure as Code active"
                 data-filter-item
                 data-category="Cloud Security / Infrastructure as Code"
-      
+            
                 data-description="
-                  <h4>1. Overview & Objectives</h4>
-                  <p>Production-ready 3-tier architecture on Microsoft Azure, following Zero-Trust principles and fully automated via Terraform modules.</p>
-      
-                  <h4>2. Architecture Design</h4>
-                  <ul>
-                    <li>Azure Application Gateway + WAF as internet-facing entry.</li>
-                    <li>AKS (App tier) in isolated subnet with Azure CNI & UDRs.</li>
-                    <li>Private Storage / DB with Private Endpoints & Private DNS.</li>
-                    <li>Azure Firewall enforcing egress filtering & threat-intel.</li>
-                  </ul>
-      
-                  <h4>3. Security Automation</h4>
-                  <ul>
-                    <li>Defender for Cloud & Sentinel analytics + Logic App remediation.</li>
-                    <li>tfsec/Checkov gates in CI pipeline; Azure Policy as code.</li>
-                    <li>Workload Identity & Conditional Access hardening.</li>
-                  </ul>
-      
-                  <h4>4. CI/CD Pipeline & Outcomes</h4>
-                  <ul>
-                    <li>Azure DevOps multi-stage YAML (Dev → Prod) with manual approvals.</li>
-                    <li>Secure variable groups & Key Vault secrets integration.</li>
-                    <li><strong>30 % faster</strong> rollout, <strong>0 critical misconfigs</strong> post-tfsec scan.</li>
-                  </ul>
-      
-                  <h4>5. IAM & RBAC</h4>
-                  <ul>
-                    <li>Reusable <code>iam</code> module assigning least-privilege roles.</li>
-                    <li>Platform-managed identities for pipelines & AKS workloads.</li>
-                    <li>Key Vault RBAC + workload identity federation.</li>
-                  </ul>
-      
-                  <h4>6. SOC & Threat Detection</h4>
-                  <ul>
-                    <li>Sentinel connectors (Azure, M365, Defender) ingesting logs.</li>
-                    <li>Custom KQL analytics rules & dashboards for alert triage.</li>
-                    <li>MITRE mapping and incident automation playbooks.</li>
-                  </ul>
-      
-                  <h4>7. Governance & Policies</h4>
-                  <ul>
-                    <li>Terraform-driven Azure Policy assignments (deny public IP, enforce HTTPS).</li>
-                    <li>Policy Initiative for NIST SP 800-53 compliance baseline.</li>
-                    <li><code>modules/policy</code> automatically remediating drifts.</li>
-                  </ul>
+                  <p>Designed and deployed a production-ready 3-tier web architecture on Microsoft Azure, fully automated with Terraform and secured by Zero-Trust controls, Defender for Cloud, and Azure Policy.</p>
                 "
-      
+            
                 data-implementation="
                   <ul>
-                    <li>Terraform modules: <code>networking</code>, <code>waf</code>, <code>aks</code>, <code>keyvault</code>, <code>firewall</code>, <code>iam</code>, <code>policy</code>, <code>sentinel</code>.</li>
-                    <li>Pipeline stages: <code>fmt → init → validate (tfsec) → plan → apply</code>.</li>
-                    <li>Outputs exported for downstream modules & documentation.</li>
+                    <li>Terraform modules for <code>networking</code>, <code>waf</code>, <code>aks</code>, <code>keyvault</code>, <code>firewall</code>, <code>iam</code>, <code>policy</code>, and <code>sentinel</code>.</li>
+                    <li>Azure DevOps YAML pipeline (Dev → Prod) with tfsec / Checkov security gates.</li>
+                    <li>Defender & Sentinel analytics, Logic App auto-remediation playbooks.</li>
+                    <li>Key Vault RBAC + AKS Workload Identity for secret-less access.</li>
                   </ul>
                 "
-      
+            
                 data-images='[
-                  \"./assets/images/3tier-overview.png\",
-                  \"./assets/images/architecture-design.png\",
-                  \"./assets/images/security-automation.png\",
-                  \"./assets/images/cicd-pipeline.png\",
-                  \"./assets/images/iam-rbac.png\",
-                  \"./assets/images/soc-dashboards.png\",
-                  \"./assets/images/policy-compliance.png\"
+                  "./assets/images/3tier-overview.png",
+                  "./assets/images/architecture-design.png",
+                  "./assets/images/security-automation.png",
+                  "./assets/images/cicd-pipeline.png"
                 ]'>
-      
+            
               <a href="#">
                 <figure class="project-img">
-                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
-                  <img src="./assets/images/3tier-overview.png" alt="3-Tier Secure Azure Architecture" loading="lazy">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/3tier-overview.png"
+                       alt="3-Tier Secure Azure Architecture"
+                       loading="lazy">
                 </figure>
+            
                 <h3 class="project-title">3-Tier Secure Azure Architecture</h3>
                 <p class="project-category">Cloud Security / Infrastructure as Code</p>
               </a>
             </li>
+
 
             <!-- IAM Automation with Terraform -->
             <li class="Identity & Access Management active"
@@ -1082,56 +1043,44 @@
               </a>
             </li>
 
-
-
-
-
-
-      
-            <!-- =======================================================
-                 🔹 Small Business Threat Simulation  (ENHANCED)
-            ======================================================= -->
+            <!-- Small Business Threat Simulation -->
             <li class="On-Prem & Network Security active"
                 data-filter-item
                 data-category="On-Prem & Network Security"
-      
+            
                 data-description="
-                  <h4>1. Setup & Environment</h4>
-                  <ul>
-                    <li>VirtualBox NAT network (LAN + Internet) with PfSense.</li>
-                    <li>Windows Server 2022 DC (AD DS, DNS, DHCP) + six Win 10 clients.</li>
-                    <li>Sysmon & Windows Event Forwarding for centralised telemetry.</li>
-                  </ul>
-      
-                  <h4>2. Attack Simulation & Detection</h4>
-                  <p>Credential dumping & lateral movement from Kali Linux; detections validated via Sysmon (Event ID 10), 4624, 4670. Hardened GPOs and retested.</p>
+                  <p>Created a virtual small-business network in VirtualBox with PfSense firewall, Windows Server 2022 AD Domain Controller, and Windows 10 clients. Simulated credential-dump and lateral-movement attacks from Kali Linux and validated detections via Sysmon + Windows Event Forwarding.</p>
                 "
-      
+            
                 data-implementation="
                   <ul>
-                    <li>PfSense firewall rules (deny-by-default, allow AD ports, DNS).</li>
-                    <li>Sysmon XML (SwiftOnSecurity) + WEF subscription.</li>
-                    <li>Mimikatz <code>sekurlsa::logonpasswords</code>, ProcDump on LSASS.</li>
-                    <li>Correlated events, exported CSV reports for executive summary.</li>
+                    <li>PfSense VLANs, DNS/DHCP, and deny-by-default firewall rules.</li>
+                    <li>Sysmon XML (SwiftOnSecurity) + WEF subscription to central collector.</li>
+                    <li>Executed Mimikatz (<code>sekurlsa::logonpasswords</code>) and ProcDump on LSASS.</li>
+                    <li>Correlated Event IDs 10, 4624, 4670; exported CSV report for findings.</li>
                   </ul>
                 "
-      
+            
                 data-images='[
-                  \"./assets/images/lab-diagram.png\",
-                  \"./assets/images/pfsense-dashboard.png\",
-                  \"./assets/images/attack-sim.png\",
-                  \"./assets/images/sysmon-logs.png\"
+                  "./assets/images/lab-diagram.png",
+                  "./assets/images/pfsense-dashboard.png",
+                  "./assets/images/attack-sim.png",
+                  "./assets/images/sysmon-logs.png"
                 ]'>
-      
+            
               <a href="#">
                 <figure class="project-img">
                   <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
-                  <img src="./assets/images/lab-diagram.png" alt="Small Business Threat Simulation" loading="lazy">
+                  <img src="./assets/images/lab-diagram.png"
+                       alt="Small Business Threat Simulation"
+                       loading="lazy">
                 </figure>
+            
                 <h3 class="project-title">Small Business Threat Simulation</h3>
                 <p class="project-category">On-Prem & Network Security</p>
               </a>
             </li>
+
       
           </ul><!-- /.project-list -->
         </section><!-- /.projects -->
