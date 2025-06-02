@@ -1,135 +1,160 @@
-'use strict';
+/* ==============================================================
+   script.js – updated for multi-section modal + arrow slider
+   Copy-paste this file over your existing one.
+   ============================================================== */
 
-// element toggle function
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
+"use strict";
 
-// sidebar variables
+/* ----- Helper: toggle .active class on any element ----- */
+const elementToggle = (el) => el.classList.toggle("active");
+
+/* ----- Sidebar (mobile) ----- */
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+sidebarBtn.addEventListener("click", () => elementToggle(sidebar));
 
-// sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
-
-// custom select variables
-const select = document.querySelector("[data-select]");
+/* ----- Custom select filter (mobile + desktop) ----- */
+const select      = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
 const selectValue = document.querySelector("[data-selecct-value]");
-const filterBtn = document.querySelectorAll("[data-filter-btn]");
-
-select.addEventListener("click", function () { elementToggleFunc(this); });
-
-// add event in all select items
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    elementToggleFunc(select);
-    filterFunc(selectedValue);
-  });
-}
-
-// filter variables
+const filterBtns  = document.querySelectorAll("[data-filter-btn]");
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
-const filterFunc = function (selectedValue) {
-  for (let i = 0; i < filterItems.length; i++) {
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
+select.addEventListener("click", () => elementToggle(select));
+
+/* core filter function */
+const applyFilter = (val) => {
+  filterItems.forEach((item) => {
+    if (val === "all" || val === item.dataset.category) {
+      item.classList.add("active");
     } else {
-      filterItems[i].classList.remove("active");
+      item.classList.remove("active");
     }
-  }
-}
+  });
+};
 
-// add event in all filter button items for large screen
-let lastClickedBtn = filterBtn[0];
+/* select items (mobile dropdown) */
+selectItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    const value = item.innerText.toLowerCase();
+    selectValue.innerText = item.innerText;
+    elementToggle(select);
+    applyFilter(value);
+  });
+});
 
-for (let i = 0; i < filterBtn.length; i++) {
-  filterBtn[i].addEventListener("click", function () {
-    let selectedValue = this.innerText.toLowerCase();
+/* filter buttons (desktop) */
+let lastClickedBtn = filterBtns[0];
+filterBtns.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    const value = this.innerText.toLowerCase();
     selectValue.innerText = this.innerText;
-    filterFunc(selectedValue);
-
+    applyFilter(value);
     lastClickedBtn.classList.remove("active");
     this.classList.add("active");
     lastClickedBtn = this;
   });
-}
+});
 
-// contact form variables
-const form = document.querySelector("[data-form]");
+/* ----- Contact form validation ----- */
+const form       = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
+const formBtn    = document.querySelector("[data-form-btn]");
 
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
+formInputs.forEach((inp) => {
+  inp.addEventListener("input", () => {
+    formBtn.toggleAttribute("disabled", !form.checkValidity());
   });
-}
+});
 
-// page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
+/* ----- Page navigation ----- */
+const navLinks = document.querySelectorAll("[data-nav-link]");
+const pages    = document.querySelectorAll("[data-page]");
 
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
+navLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    pages.forEach((page, idx) => {
+      if (this.innerHTML.toLowerCase() === page.dataset.page) {
+        page.classList.add("active");
+        navLinks[idx].classList.add("active");
         window.scrollTo(0, 0);
       } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
+        page.classList.remove("active");
+        navLinks[idx].classList.remove("active");
       }
-    }
-  });
-}
-
-// Modal for project preview with multiple images and implementation
-const modal = document.getElementById("project-modal");
-const modalTitle = document.getElementById("modal-title");
-const modalDesc = document.getElementById("modal-description");
-const modalGallery = document.getElementById("modal-gallery");
-const closeModal = document.querySelector(".close-modal");
-
-// Target each project item
-const projectItems = document.querySelectorAll("[data-filter-item]");
-
-projectItems.forEach(item => {
-  item.addEventListener("click", () => {
-    const title = item.querySelector(".project-title")?.innerText || "Project";
-    const description = item.dataset.description || "No description available.";
-    const implementation = item.dataset.implementation || "";
-    const images = JSON.parse(item.dataset.images || "[]");
-
-    modalTitle.innerText = title;
-    modalDesc.innerHTML = `<p>${description}</p><br><strong>Implementation:</strong><br>${implementation}`;
-    modalGallery.innerHTML = "";
-
-    images.forEach(src => {
-      const img = document.createElement("img");
-      img.src = src;
-      img.alt = title;
-      modalGallery.appendChild(img);
     });
+  });
+});
+
+/* ==============================================================
+   Project modal with dynamic multi-image slider
+   ============================================================== */
+const modal        = document.getElementById("project-modal");
+const modalTitle   = document.getElementById("modal-title");
+const modalDesc    = document.getElementById("modal-description");
+const modalGallery = document.getElementById("modal-gallery");
+const closeModal   = document.querySelector(".close-modal");
+const projectCards = document.querySelectorAll("[data-filter-item]");
+
+/* open modal on card click */
+projectCards.forEach((card) => {
+  card.addEventListener("click", () => {
+    /* gather data-attributes */
+    const title         = card.querySelector(".project-title")?.innerText || "Project";
+    const description   = card.dataset.description   || "";
+    const implementation= card.dataset.implementation || "";
+    const images        = JSON.parse(card.dataset.images || "[]");
+
+    /* populate modal text */
+    modalTitle.innerText = title;
+    modalDesc.innerHTML  = `${description}${implementation ? "<hr><h4>Implementation</h4>" + implementation : ""}`;
+
+    /* build slider */
+    modalGallery.innerHTML = "";                // clear previous contents
+    if (images.length) {
+      let current = 0;
+
+      /* container */
+      const slider = document.createElement("div");
+      slider.className = "slider relative";
+
+      /* image element */
+      const img = document.createElement("img");
+      img.className = "slider-img w-full h-auto";
+      img.src       = images[current];
+      img.alt       = title;
+      slider.appendChild(img);
+
+      /* helper to change slide */
+      const goTo = (dir) => {
+        current = (current + dir + images.length) % images.length;
+        img.src = images[current];
+      };
+
+      /* arrows if >1 image */
+      if (images.length > 1) {
+        const btnPrev = document.createElement("button");
+        btnPrev.className = "slider-btn prev absolute left-2 top-1/2 -translate-y-1/2 text-3xl";
+        btnPrev.innerHTML = "&#10094;";
+        btnPrev.addEventListener("click", (e) => { e.stopPropagation(); goTo(-1); });
+        slider.appendChild(btnPrev);
+
+        const btnNext = document.createElement("button");
+        btnNext.className = "slider-btn next absolute right-2 top-1/2 -translate-y-1/2 text-3xl";
+        btnNext.innerHTML = "&#10095;";
+        btnNext.addEventListener("click", (e) => { e.stopPropagation(); goTo(1); });
+        slider.appendChild(btnNext);
+      }
+
+      modalGallery.appendChild(slider);
+    }
 
     modal.classList.remove("hidden");
   });
 });
 
-// Close modal on X or outside click
-closeModal.addEventListener("click", () => modal.classList.add("hidden"));
-window.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.classList.add("hidden");
-  }
-});
+/* close modal */
+const hideModal = () => modal.classList.add("hidden");
+closeModal.addEventListener("click", hideModal);
+window.addEventListener("click", (e) => { if (e.target === modal) hideModal(); });
+window.addEventListener("keydown", (e) => { if (e.key === "Escape") hideModal(); });
